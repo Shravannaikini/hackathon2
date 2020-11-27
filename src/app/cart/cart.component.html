@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="container">
+  <h3>Cart products</h3>
+  <div class="row">
+      <div *ngFor="let item of massdata; let i=index" >
+          <div class="col-12 col-sm-6 col-md-4 mt-4">
+      <div class="card" style="width: 18rem;">
+          <img class="card-img-top" [src]="item.imageurl" alt="Cardphoto">
+          <div class="card-body">
+            <p class="card-text" style="text-align: center;">{{item.productname}}</p>
+            <div style="text-align: center;">
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+  </div>
+
+</div>
+
+

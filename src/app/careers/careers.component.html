@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="container">
+    <div class="form-group">
+
+      <div class="row justify-content-center" style="padding-top: 10px;">
+        <div class="row">   
+      <input id="search" type="text" class="form-control" placeholder="Search Products" [(ngModel)]="filterWord">   
+    </div>
+    </div>
+    </div>
+      <div class="row">
+
+      <div *ngFor="let item of massdata | filter:filterWord ; let b=index">
+          <div class="col-12 col-sm-6 col-md-4 mt-4">
+         <div class="card" style="width: 18rem;">
+          
+          <img class="card-img-top" [src]="item.imageurl" style="height: 200px; width: 200px;" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text" style="text-align: center;">{{item.productname}}</p>
+            <div style="text-align: center;">
+              <button class="btn btn-danger" style="padding: 10px;" [disabled]="button[b].btnState" (click)="deleteItem(item.id)">-</button>
+            <button class="btn btn-primary" style="padding-left: 20px;" *ngIf="button[b].btnState; else elseblock" (click)="buttonSwitch(item.id)">Add</button>
+           <ng-template #elseblock>
+             <button class="btn btn-success" style="padding: 10px;" (click)="buttonSwitch(item.id)">{{button[b].PressCount}}</button>
+           </ng-template>
+            <button class="btn btn-success" style="padding: 10px;" [disabled]="button[b].btnState" (click)="addItem(item.id)">+</button>
+   
+          </div>
+        </div>
+        </div>
+      </div>
+        </div>
+  </div>
+  <div style="font-weight: bold"[ngStyle]="{'display':display}">Cart is Full</div>
+  </div>
+  
+  

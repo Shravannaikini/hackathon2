@@ -1,0 +1,80 @@
+{
+  "posts": [
+    {
+      "productname": "Tv",
+      "imageurl": "https://www.lg.com/us/images/tvs/55ln5700/gallery/large08.jpg",
+      "id": 1
+    },
+    {
+      "productname": "fridge",
+      "imageurl": "https://www.reliancedigital.in/medias/RECONNECT-REFRIGERATOR-190-L-RH210D3PMR-LILAC-491539164-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzMTEwMHxpbWFnZS9qcGVnfGltYWdlcy9oN2UvaDUxLzkxOTIxNTE5MDgzODIuanBnfDhkY2JmZDExMzllMDQ2MTBiYWI0YTVhNGYzZDBjNTI4MGZlZjQ4ZmEzYjIzOTY4MDI2YTUyZjQxZTNhMGNmNDY",
+      "id": 2
+    },
+    {
+      "productname": "chair",
+      "imageurl": "https://www.ikea.com/in/en/images/products/martin-chair-black-black__0729761_PE737128_S5.JPG",
+      "id": 3
+    },
+    {
+      "productname": "fan",
+      "imageurl": "https://images-na.ssl-images-amazon.com/images/I/71sn7lMH3FL._SL1500_.jpg",
+      "id": 4
+    },
+    {
+      "productname": "led bulb",
+      "imageurl": "https://www.crompton.co.in/wp-content/uploads/2019/11/Anti-Bac-Bulb.png",
+      "id": 5
+    },
+    {
+      "productname": "pen",
+      "imageurl": "https://pyxis.nymag.com/v1/imgs/765/2b6/04757c03f93ee03f392b59c32daedf464b-pentel-energel.2x.rhorizontal.w600.jpg",
+      "id": 6
+    },
+    {
+      "productname": "mobile",
+      "imageurl": "https://images-na.ssl-images-amazon.com/images/I/71bp9IpcK-L._SX522_.jpg",
+      "id": 7
+    },
+    {
+      "productname": "wallclock",
+      "imageurl": "https://media.istockphoto.com/photos/wall-clock-isolated-on-white-ten-past-ten-picture-id590618818?k=6&m=590618818&s=612x612&w=0&h=4wLjAWMhvg14wa0l2XkdjxhemGCR_dOcFtWrkN4iDIQ=",
+      "id": 8
+    },
+    {
+      "productname": "headphones",
+      "imageurl": "https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5eb34dd704ebab344d095278_nuraphone-desktop.png",
+      "id": 9
+    },
+    {
+      "productname": "book",
+      "imageurl": "https://visualhunt.com/photos/2/eyeglasses-on-open-book.jpg?s=s",
+      "id": 10
+    }
+  ],
+  "cart": [
+    {
+      "productname": "Tv",
+      "imageurl": "https://www.lg.com/us/images/tvs/55ln5700/gallery/large08.jpg",
+      "pid": 1,
+      "id": 1
+    },
+    {
+      "productname": "Tv",
+      "imageurl": "https://www.lg.com/us/images/tvs/55ln5700/gallery/large08.jpg",
+      "pid": 1,
+      "id": 2
+    },
+    {
+      "productname": "Tv",
+      "imageurl": "https://www.lg.com/us/images/tvs/55ln5700/gallery/large08.jpg",
+      "pid": 1,
+      "id": 3
+    },
+    {
+      "productname": "Tv",
+      "imageurl": "https://www.lg.com/us/images/tvs/55ln5700/gallery/large08.jpg",
+      "pid": 1,
+      "id": 4
+    }
+  ]
+}

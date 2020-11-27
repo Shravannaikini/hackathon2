@@ -1,0 +1,181 @@
+<div style="padding: 10px;">
+    <div class="row" style="max-height: 400px;">
+       <div class="col-sm-4 offset-sm-4">
+          <form [formGroup]="dataForm" (ngSubmit)="onHandleSubmit()">
+              <table>
+                  <tr>
+                      <td>First Name: </td>
+                      <td><div>
+                        <input type="text" 
+                        id="fname"
+                        class="form-control"
+                        [ngClass] = "{'is-invalid':dataForm.get('fname').touched && dataForm.get('fname').invalid}"
+                        formControlName = "fname">
+                        <div class="invalid-feedback">
+                           <span>This field cannot be empty</span>
+                        </div>
+                     </div></td>   
+                  </tr>
+
+                  <tr>
+                      <td><label for="">Middle Name:</label></td>
+                      <td>
+                        <div class="form-group">    
+                            <input type="text" 
+                            id="mname"
+                            class="form-control"
+                            formControlName = "mname">
+                         </div>
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td><label for="">Last Name:</label></td>
+                      <td>
+                        <div class="form-group">  
+                            <input type="text" 
+                            id="lname"
+                            class="form-control"
+                            formControlName = "lname"
+                            [ngClass] = "{'is-invalid':dataForm.get('lname').touched && dataForm.get('lname').invalid}">
+                            <div class="invalid-feedback">
+                               <span *ngIf="dataForm.get('lname').hasError('required')">
+                                  User name field cannot be empty
+                               </span>
+                            </div>
+                         </div>
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td><label for="">Date of Birth:</label></td>
+                      <td>
+                        <div class="form-group">   
+                            <input type="date" 
+                            id="iddob"
+                            [(ngModel)]="date"
+                            class="form-control"
+                            formControlName = "dob"
+                            [ngClass] = "{'is-invalid':dataForm.get('dob').touched && dataForm.get('dob').invalid}">
+                            <div class="invalid-feedback">
+                               <span>Select you date of birth from the Calender</span>
+                            </div>
+                         </div>
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td><label for="">Age:</label></td>
+                      <td>
+                        <input type="text" 
+                            id="iddob"
+                            class="inputele form-control"
+                            formControlName = "age"
+                            disabled="true"
+                            [(ngModel)] = "dispAge"
+                            [value]='ageCalculator()'       
+                           >
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td><label for="">Mobile:</label></td>
+                      <td>
+                        <div class="form-group">    
+                            <input type="tel" 
+                            id="lname"
+                            class="form-control"
+                            formControlName = "mobile"
+                            [ngClass] = "{'is-invalid':dataForm.get('mobile').touched && dataForm.get('mobile').invalid}">
+                            <div class="invalid-feedback">
+                               <span *ngIf="dataForm.get('mobile').hasError('required')">
+                                  Mobile field cannot be empty
+                               </span>
+                               <span *ngIf="dataForm.get('mobile').hasError('minlength')">
+                                Minimum 10 digits
+                               </span>
+                               <span *ngIf="dataForm.get('mobile').hasError('maxlength')">
+                                Maximum 10 digits
+                               </span>
+                               <span *ngIf="dataForm.get('mobile').hasError('pattern')">
+                                Mobile number should start with 6,7,8,9 digits
+                               </span>
+                            </div>
+                         </div>
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td><label for="">Email: </label></td>
+                      <td>
+                        <div class="form-group">     
+                            <input type="email" 
+                            id="idemail"
+                            class="form-control"
+                            formControlName = "email"
+                            [ngClass] = "{'is-invalid':dataForm.get('email').touched && dataForm.get('email').invalid}">
+                            <div class="invalid-feedback">
+                               <span *ngIf="dataForm.get('email').hasError('required')">
+                                  Email address field cannot be empty
+                               </span>
+                               <span *ngIf="dataForm.get('email').hasError('email')">
+                                  Invalid email address. Please enter a valid email address
+                               </span>
+                            </div>
+                         </div>
+                      </td>
+                  </tr>
+                  
+                  <tr>
+                      <td><label for="">Password: </label></td>
+                      <td>
+                        <div class="form-group">  
+                            <input type="text" 
+                            id="password"
+                            class="form-control" appBlockCopy
+                            formControlName = "password"
+                            [ngClass] = "{'is-invalid':dataForm.get('password').touched && dataForm.get('password').invalid}">
+                            <div class="invalid-feedback">
+                               <span *ngIf="dataForm.get('password').hasError('required')">
+                                  Please enter your password
+                               </span>
+                               <span *ngIf="dataForm.get('password').hasError('pattern')">
+                                  Password must contain special char, Number and Capital letter
+                               </span>
+                            </div>
+                         </div>
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td> <label for="">Confirm Password: </label></td>
+                      <td>
+                        <div class="form-group">
+                            <input type="password" 
+                            id="confirmpassword"
+                            class="form-control" appBlockCopy
+                            formControlName = "confirmPassword"
+                            [ngClass] = "{'is-invalid':dataForm.get('confirmPassword').touched && dataForm.get('confirmPassword').invalid}">
+                            <div class="invalid-feedback">
+                               <div *ngIf="dataForm.get('confirmPassword').hasError('required'); else else_content">
+                                 This field must be filled
+                               </div>
+                               <ng-template #else_content>Passwords are mismatching</ng-template>
+                            </div>
+                         </div>
+                      </td>
+                  </tr>
+              </table>   
+              <div class="row justify-content-center">
+                <button class="btn btn-primary" type="submit" appHooverEffect
+                   [disabled]="dataForm.invalid">
+                      Register
+                   </button>
+                
+             </div>
+          </form>
+       </div>
+    
+    </div>
+ </div>
+

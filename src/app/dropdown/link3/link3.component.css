@@ -1,0 +1,8 @@
+.box {
+    width: 50px;
+    overflow: hidden;
+}
+
+.box select{
+    width: 50px;
+}
