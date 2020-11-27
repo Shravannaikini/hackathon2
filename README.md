@@ -6,6 +6,6 @@ This angular project contains mainly 7 component
 5. Contact Us - component name inside app folder "contact"
 6. Cart - component name inside app folder "Cart"
 
-the 8th component is register whose file name inside app folder is "register" it can be accessed from the header as the hackathon requirements say that register component should not have header and footer. to access header run Localhost:4200/register in browser after initialising angular project.
+the 8th component is register whose file name inside app folder is "register" it can be accessed from the header as the hackathon requirements say that register component should not have header and footer. to access header run Localhost:4200/register in browser after initialising angular project. Components Add product, Product, Cart may not work properly if their server file db.json is offline.
 
 Thankyou.
