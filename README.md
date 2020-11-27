@@ -1,27 +1,11 @@
-# CarrowsMain
+This angular project contains mainly 7 component
+1. Home - component name inside app folder "Home"
+2. Profile - component name inside app folder "about-us"
+3. Add Product -  component name inside app folder "Amount"
+4. Product - component name inside app folder "careers"
+5. Contact Us - component name inside app folder "contact"
+6. Cart - component name inside app folder "Cart"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+the 8th component is register whose file name inside app folder is "register" it can be accessed from the header as the hackathon requirements say that register component should not have header and footer. to access header run Localhost:4200/register in browser after initialising angular project.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Thankyou.
